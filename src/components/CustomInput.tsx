@@ -1,9 +1,14 @@
 import React from "react";
 
-const CustomInput = () => {
+interface ICustomInput {
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const CustomInput = (props: ICustomInput) => {
   return (
     <input
-      placeholder="Введите Id или имя "
+      onChange={props.onChange}
+      placeholder="Введите имя"
       className="customInput"
       type="text"
     />
