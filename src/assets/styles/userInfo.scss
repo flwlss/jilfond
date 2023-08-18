@@ -1,11 +1,52 @@
+.userInfo::-webkit-scrollbar {
+  width: 0;
+}
+
 .userInfo {
   flex: 1;
+  overflow-y: scroll;
+
+  &__card {
+    padding: 30px 30px 30px 20px;
+    display: flex;
+
+    &__photo {
+      width: 425px;
+      height: 286px;
+      background: grey;
+      margin-right: 60px;
+    }
+
+    &__info {
+      flex: 1;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 22px;
+      color: #333333;
+      font-weight: 600;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #333333;
+      margin-right: 5px;
+    }
+
+    &__text {
+      font-weight: 400;
+      color: #76787d;
+    }
+  }
 
   &__help {
     font-size: 14px;
     line-height: 17px;
     height: 100%;
-    color: #76787D;
+    color: #76787d;
     display: flex;
     align-items: center;
     justify-content: center;

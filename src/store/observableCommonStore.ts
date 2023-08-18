@@ -1,11 +1,12 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-console */
-import { makeAutoObservable } from "mobx";
+import { makeAutoObservable, runInAction } from "mobx";
 import React from "react";
 import { getUsersRequest } from "./requests.ts/commonStoreRequest";
 
 class ObservableCommonStore {
   users: User[] | null = null;
+  selectedUser: number = 0;
 
   constructor() {
     console.log("ObservableCommonStore constructor");
@@ -24,6 +25,12 @@ class ObservableCommonStore {
     } catch (e) {
       console.log(e);
     }
+  }
+
+  selectUser(id: number) {
+    runInAction(() => {
+      this.selectedUser = id;
+    });
   }
 }
 

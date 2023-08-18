@@ -30,7 +30,12 @@ const Sidebar = () => {
         <div>
           {filterUsers()?.map((item, index) => {
             return (
-              <SidebarItem email={item.email} name={item.name} key={index} />
+              <SidebarItem
+                id={item.id}
+                email={item.email}
+                name={item.name}
+                key={index}
+              />
             );
           })}
         </div>

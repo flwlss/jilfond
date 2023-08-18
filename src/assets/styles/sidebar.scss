@@ -50,25 +50,25 @@
       padding: 0 15px;
       overflow: hidden;
       white-space: nowrap;
+    }
 
-      &__name {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333333;
-        line-height: 17px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        margin-bottom: 5px;
-      }
+    &__name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+      line-height: 17px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 5px;
+    }
 
-      &__email {
-        font-size: 14px;
-        font-weight: 400;
-        color: #76787d;
-        line-height: 17px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+    &__email {
+      font-size: 14px;
+      font-weight: 400;
+      color: #76787d;
+      line-height: 17px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
