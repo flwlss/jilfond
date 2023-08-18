@@ -1,7 +1,13 @@
 import React from "react";
 
 const CustomInput = () => {
-  return <input className="customInput" type="text" />;
+  return (
+    <input
+      placeholder="Введите Id или имя "
+      className="customInput"
+      type="text"
+    />
+  );
 };
 
 export default CustomInput;

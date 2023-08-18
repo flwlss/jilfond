@@ -1,0 +1,13 @@
+.userInfo {
+  flex: 1;
+
+  &__help {
+    font-size: 14px;
+    line-height: 17px;
+    height: 100%;
+    color: #76787D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
