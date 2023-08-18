@@ -16,7 +16,13 @@ const UserInfo = () => {
     <div className="userInfo">
       {store.commonStore.selectedUser !== 0 ? (
         <div className="userInfo__card">
-          <div className="userInfo__card__photo"></div>
+          <div className="userInfo__card__photo">
+            <img
+              className="userInfo__card__photo__photo"
+              src="/images/noImage.png"
+              alt=""
+            />
+          </div>
           <div className="userInfo__card__info">
             <h2 style={{ marginBottom: 10 }} className="userInfo__card__title">
               {selectedUser?.name}
