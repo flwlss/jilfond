@@ -2,11 +2,14 @@
 /* eslint-disable no-console */
 import { makeAutoObservable, runInAction } from "mobx";
 import React from "react";
-import { getUsersRequest } from "./requests.ts/commonStoreRequest";
+import {
+  getUsersByIdRequest,
+  getUsersRequest,
+} from "./requests.ts/commonStoreRequest";
 
 class ObservableCommonStore {
   users: User[] | null = null;
-  selectedUser: number = 0;
+  selectedUser: User | null = null;
 
   constructor() {
     console.log("ObservableCommonStore constructor");
@@ -18,7 +21,9 @@ class ObservableCommonStore {
       const data = await getUsersRequest();
       if (data) {
         console.log("data result", data);
-        this.users = data;
+        runInAction(() => {
+          this.users = data;
+        });
         return data;
       }
       return undefined;
@@ -27,10 +32,20 @@ class ObservableCommonStore {
     }
   }
 
-  selectUser(id: number) {
-    runInAction(() => {
-      this.selectedUser = id;
-    });
+  async getUserById(id: number) {
+    try {
+      const data = await getUsersByIdRequest(id);
+      if (data) {
+        console.log("user data result", data);
+        runInAction(() => {
+          this.selectedUser = data;
+        });
+        return data;
+      }
+      return undefined;
+    } catch (e) {
+      console.log(e);
+    }
   }
 }
 

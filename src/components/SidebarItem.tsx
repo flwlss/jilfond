@@ -11,7 +11,7 @@ const SidebarItem = (props: ISideItemProps) => {
   return (
     <div
       onClick={() => {
-        store.commonStore.selectUser(props.id);
+        store.commonStore.getUserById(props.id);
       }}
       className="sidebar__item"
     >

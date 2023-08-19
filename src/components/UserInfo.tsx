@@ -6,15 +6,14 @@ const UserInfo = () => {
   const [selectedUser, setSelectedUser] = useState<User>();
 
   useEffect(() => {
-    const user = store.commonStore.users?.find(
-      (x) => x.id === store.commonStore.selectedUser
-    );
-    setSelectedUser(user);
+    if (store.commonStore.selectedUser) {
+      setSelectedUser(store.commonStore.selectedUser);
+    }
   }, [store.commonStore.selectedUser]);
 
   return (
     <div className="userInfo">
-      {store.commonStore.selectedUser !== 0 ? (
+      {store.commonStore.selectedUser ? (
         <div className="userInfo__card">
           <div className="userInfo__card__photo">
             <img
