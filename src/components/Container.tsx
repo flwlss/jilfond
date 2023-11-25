@@ -1,11 +1,7 @@
 import React from "react";
 
-interface IContainerProps {
-  children: JSX.Element;
-}
-
-const Container = (props: IContainerProps) => {
-  return <div className="container">{props.children}</div>;
+const Container = ({ children }: { children: JSX.Element }) => {
+  return <div className="container">{children}</div>;
 };
 
 export default Container;

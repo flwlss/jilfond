@@ -1,10 +1,10 @@
-.header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 45px 0;
 
-  &__title {
+  h1 {
     font-size: 32px;
     line-height: 39px;
     color: #e31f24;

@@ -16,32 +16,20 @@ const UserInfo = () => {
       {store.commonStore.selectedUser ? (
         <div className="userInfo__card">
           <div className="userInfo__card__photo">
-            <img
-              className="userInfo__card__photo__photo"
-              src="/images/noImage.png"
-              alt=""
-            />
+            <img src="/images/noImage.png" alt="" />
           </div>
           <div className="userInfo__card__info">
-            <h2 style={{ marginBottom: 10 }} className="userInfo__card__title">
-              {selectedUser?.name}
-            </h2>
+            <h2 style={{ marginBottom: 10 }}>{selectedUser?.name}</h2>
             <div>
-              <span className="userInfo__card__subtitle">email:</span>
-              <span className="userInfo__card__text">
-                {selectedUser?.email}
-              </span>
+              <span>email:</span>
+              <p>{selectedUser?.email}</p>
             </div>
             <div style={{ margin: "10px 0 20px 0" }}>
-              <span className="userInfo__card__subtitle">phone:</span>
-              <span className="userInfo__card__text">
-                {selectedUser?.phone}
-              </span>
+              <span>phone:</span>
+              <p>{selectedUser?.phone}</p>
             </div>
-            <h2 style={{ marginBottom: 25 }} className="userInfo__card__title">
-              О себе:
-            </h2>
-            <p className="userInfo__card__text">{selectedUser?.website}</p>
+            <h2 style={{ marginBottom: 25 }}>О себе:</h2>
+            <p>{selectedUser?.website}</p>
           </div>
         </div>
       ) : (
