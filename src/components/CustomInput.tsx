@@ -9,7 +9,6 @@ const CustomInput = (props: ICustomInput) => {
     <input
       onChange={props.onChange}
       placeholder="Введите имя"
-      className="customInput"
       type="text"
     />
   );

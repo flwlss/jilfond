@@ -16,7 +16,7 @@ const SidebarItem = (props: ISideItemProps) => {
       className="sidebar__item"
     >
       <div className="sidebar__item__photo">
-        <img src="/images/noImage.png" alt="" />
+        <img src="/images/noImage.png" alt="noImage" />
       </div>
       <div className="sidebar__item__info">
         <h3>{props.name}</h3>
